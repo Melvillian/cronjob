@@ -11,9 +11,9 @@ contract CreateCronJobScript is Script {
 
         // the address that our cronjob will call to check if the cronjob is executable
         // and the address that our cronjob will call to execute the cronjob
-        address incrementContract = address(0xdaAe2f773507162f6EE8D0f8Dd6E83383B67042B); // replace this with the address deployed by Increment.s.sol
+        address incrementContract = address(0x7C546e40aD9A88d080eDb870Bf9cB0d1c5cB5821); // replace this with the address deployed by Increment.s.sol
 
-        CronInbox cronInbox = CronInbox(0x8752af55E7B892D7F7E2180907EB6bEd9a5B1302); // replace this with the address deployed by CronInbox.s.sol
+        CronInbox cronInbox = CronInbox(0x058A33b4a84f2e70bfb7cF2a59B227159834BE48); // replace this with the address deployed by CronInbox.s.sol
 
         FunctionCall[] memory functionCalls = new FunctionCall[](1);
         functionCalls[0] = FunctionCall(abi.encodeWithSelector(Increment.increment.selector), incrementContract, 0);
